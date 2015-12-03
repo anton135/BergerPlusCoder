@@ -36,6 +36,8 @@
             this.lbK = new System.Windows.Forms.Label();
             this.lbR = new System.Windows.Forms.Label();
             this.lbMu = new System.Windows.Forms.Label();
+            this.tbWeights = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCode
@@ -108,11 +110,32 @@
             this.lbMu.TabIndex = 7;
             this.lbMu.Text = "...";
             // 
+            // tbWeights
+            // 
+            this.tbWeights.Location = new System.Drawing.Point(12, 203);
+            this.tbWeights.Multiline = true;
+            this.tbWeights.Name = "tbWeights";
+            this.tbWeights.ReadOnly = true;
+            this.tbWeights.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbWeights.Size = new System.Drawing.Size(260, 105);
+            this.tbWeights.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 187);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Weights:";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 180);
+            this.ClientSize = new System.Drawing.Size(284, 320);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tbWeights);
             this.Controls.Add(this.lbMu);
             this.Controls.Add(this.lbR);
             this.Controls.Add(this.lbK);
@@ -139,6 +162,8 @@
         private System.Windows.Forms.Label lbK;
         private System.Windows.Forms.Label lbR;
         private System.Windows.Forms.Label lbMu;
+        private System.Windows.Forms.TextBox tbWeights;
+        private System.Windows.Forms.Label label4;
     }
 }
 

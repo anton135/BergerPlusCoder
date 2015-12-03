@@ -19,11 +19,21 @@ namespace BergerWin
 
         private void btnCode_Click(object sender, EventArgs e)
         {
-            BergerPCoder bc = new BergerPCoder();
-            tbBinaryOut.Text = bc.CodeBinaryStringBlock(tbBinaryIn.Text);
-            lbK.Text = "K=" + bc.LenthOfInfo;
-            lbMu.Text = "Mu=" + bc.Mu;
-            lbR.Text = "R=" + bc.R;
+            if (tbBinaryIn.Text != "")
+            {
+                BergerPCoder bc = new BergerPCoder();
+                tbBinaryOut.Text = bc.CodeBinaryStringBlock(tbBinaryIn.Text);
+                lbK.Text = "K=" + bc.LenthOfInfo;
+                lbMu.Text = "Mu=" + bc.Mu;
+                lbR.Text = "R=" + bc.R;
+
+                tbWeights.Text = "";
+                foreach (var item in bc.GenerateWeightedCombination(tbBinaryIn.Text))
+                {
+                    
+                    tbWeights.Text += item.Value + " - " + item.Key + Environment.NewLine;
+                }
+            }
         }
     }
 }
